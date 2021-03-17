@@ -1,0 +1,281 @@
+<html>
+  <head>
+        <title>Registration form</title>
+        <body>
+          <h1>Skills</h1>
+            
+          <style>
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+            h1{
+                font-size: 40;
+                text-align: left;
+                text-decoration: hotpink;
+                color: greenyellow;
+                
+  }
+            body{
+                background-color:white;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;  
+                
+            }
+        
+
+.modal {
+  display: none; 
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+<script src="./empData.js"></script>
+</head>
+<body>
+  
+  
+  
+  
+  <button id="myBtn">Add skills</button>
+  <header>:
+    <input type="text" id="show" name="skills"><br>
+  </header>
+  
+  
+  
+  <div id="myModal" class="modal">
+    
+    
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <form name="myform">
+      <table>
+      <tr>
+      <td>
+     
+        <select id="mi">
+         <option value="" selected="selected">Select...</option>
+          <option value="frontend">frontend</option>
+      <option value="backend">backend</option>
+      
+      <option value="other">Other</option>
+      </select>
+      </td>
+      </tr>
+      </table>
+     
+    </form>
+      <button type="button" onclick="setAsList()">Set as selection</button>
+<button type="button" onclick="addToList()">Add to selection</button>
+     
+                <header>Add skills:
+                    <input type="text"id="txtVal"/>
+                    <button onclick="addLi()">add</button>
+                </header>
+    
+        <input type="Checkbox"id="txtValue" name="skill" value="CSS">CSS
+        <input type="Checkbox"id="txtValues" name="skill" value="JAVA">JAVA
+        <input type="Checkbox"id="cp" name="skill"value="CPP" >CPP
+        <input type="Checkbox"id="sq"name="skill" value="SQL">SQL
+        <input type="Checkbox"id="dm" name="skill" value="DBMS">DBMS
+        <input type="Checkbox"id="or" name="skill"value="ORACLE">ORACLE
+        <input type="Checkbox"id="ht" name="skill" value="HTML5">HTML5
+        <input type="Checkbox"id="ph" name="skill" value="PHP">PHP
+        <input type="Checkbox"id="oo" name="skill" value="OS">OS
+        <input type="Checkbox"id="pi" name="skill" value="EXCEL">EXCEL
+        <input type="Checkbox"id="dev" name="skill"value="DEVELOPER">DEVELOPER</p>
+
+        <button type="button" onclick="addList()&&addLists()">Set as selection</button>
+        
+        
+  </div>
+
+</div>
+
+<script>
+ 
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    
+  }
+}
+</script>
+
+<ul id="printHere">
+
+</ul>
+<script>
+
+    function print() {
+        var x = document.getElementById("mi");
+        console.log(x.value);//test to see if it works
+        document.getElementById("printHere").innerHTML = x;
+
+    }
+
+    function setAsList(){
+        var x = document.getElementById("mi");
+        console.log(x.value);//test to see if it works
+        document.getElementById("printHere").innerHTML = "<li>" + x.value + "</li>";
+    }
+
+    function addToList() {
+        var x = document.getElementById("mi");
+        console.log(x.value);//test to see if it works
+        document.getElementById("printHere").innerHTML += "<li>" + x.value + "</li>";
+    }
+    function myFunction(){
+
+    var textnode = document.createTextNode("html");
+  node.appendChild(textnode);
+  document.getElementById("mi").appendChild(node);
+}
+    
+
+
+</script>
+<script>
+  function addLi()
+  {
+    var txtVal=document.getElementById('txtVal').value,
+    listNode=document.getElementById('printHere'),
+    liNode=document.createElement("LI"),
+    txtNode=document.createTextNode(txtVal);
+    liNode.appendChild(txtNode);
+    listNode.appendChild(liNode);
+  }
+</script>
+<script>
+  function addList()
+  {
+    var txtValue=document.getElementById('txtValue').value,
+    listNode=document.getElementById('printHere'),
+    liNode=document.createElement("LI"),
+    txtNode=document.createTextNode(txtValue);
+    liNode.appendChild(txtNode);
+    listNode.appendChild(liNode);
+   
+  }
+</script>
+<script>
+  function addLists(){
+var txtValues=document.getElementById('txtValues').value,
+listNode=document.getElementById('printHere'),
+liNode=document.createElement("LI"),
+txtNode=document.createTextNode(txtValues);
+liNode.appendChild(txtNode);
+listNode.appendChild(liNode);
+  }
+</script>
+
+
+<br>
+<br>
+
+<h2>Employment status</h2>
+<form action="" name="employee">
+
+  <select id="empStatus" name ="empStatus">
+    
+        <option value="employed">employed</option>
+        <option value="Unmployed">Unemployed</option>
+ </select>
+        <h2>Seeking Job</h2>
+       
+        
+            <input type="radio" name="seekingJob" value="yes">yes
+            <br>
+            <input type="radio" name="seekingJob" value="no">no
+          <br><br>
+
+         <label> JOB TITLE </label>       
+<input type="text" placeholder="title" name="jobTittle" maxlength="200"/> <br> <br>
+
+<label>Job type</label>
+<select name="jobType">
+    <option value="Full-time">Full-time</option>
+    <option value="Part-time">Part-time</option>
+
+    </select>
+    <br>
+    <br>
+    <label>Job summary</label>
+<input type="text" name="jobSummary" placeholder="summary" maxlength="300">
+<br>
+<a href="join.html">
+<button type="go back">go back</button>
+</a>
+<button type="save details" id="button1" >save details</button>
+
+<!-- <a href="./lastpage.html">Go</a> -->
+<a href="./lastpage.html">
+<button type="button" value="click" id="button1" onclick ="getEmployee()" >generate</button>
+</a>
+
+</a>
+</form>
+
+        </body>
+    </head>
+</html>
