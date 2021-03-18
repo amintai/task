@@ -1,6 +1,10 @@
 <html>
     <head>
+        <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+       
         <h1 style="align-items: center;">Portfolio</h1>
+        <div id="x"></div>
+        <!-- <img src="" alt="Sorry" id="image"> -->
         <script>
            var firstName = localStorage.getItem("firstName")
            var lastName = localStorage.getItem("lastName")
@@ -21,39 +25,17 @@
           var jobType = localStorage.getItem("jobType")
           var jobSummary = localStorage.getItem("jobSummary")
 
-//           //document.getElementById("demo").innerHTML = firstName; 
+           var dataImage = localStorage.getItem('profilePicture');
+          var actImage =  dataImage.split("\\").pop()
+     
+           document.write(`<div class="d-flex justify-content-center"><img src="${actImage}"  style="height: 100px ; width:100px;" ></div>`);
 
-//           document.querySelectorAll('#profilePicture').addEventListener('change' ,function() {
-//             const reader = new FileReader();
 
-//         reader.addEventListener("load" , () => {
-//             localStorage.setItem("recent-image" , reader.result);
-//         });
-//         reader.readAsDataURL(this.files[0])
-//     });
 
-//           document.addEventListener("DOMContentLoaded", ()=> {
-//     const recentImageDataUrl = localStorage.getItem("recent-image");
-
-//     if(recentImageDataUrl) {
-//         document.querySelector("#imgPreview").setAttribute("src" , recentImageDataUrl)
-//     }
-// })
-            document.write(`<h1>Hello i am :${firstName} Middle Name : ${middleName} Last Name : ${lastName}i've done my Education : ${education} and my  Email is : ${email} i am from Address ${address} and my birthdate is Date : ${date} Gender : ${gender} , my Phone Number is : ${phoneNumber}  Number Type : ${numberType}</h1>`)
-            document.write(`<h1> My Employeement statusEmployee Status : ${empStatus}, Seeking Job : ${seekingJob} , Job Tittle : ${jobTittle} , job Type :${jobType} , Job Summary : ${jobSummary}
+            document.write(`<h1>Hello i am  <strong>${firstName}</strong>  Middle Name  <strong>${middleName}</strong> Last Name  <strong>${lastName} </strong> i've done my Education  <strong>${education}</strong> and my  Email is <strong> ${email} </strong> i am from Address <strong>${address}</strong> and my birthdate is Date <strong>${date}</strong> Gender <strong>${gender}</strong> , my Phone Number is <strong> ${phoneNumber}</strong>  Number Type <strong>${numberType} </strong></h1>`)
+            document.write(`<h1><br><br> My Employeement statusEmployee Status <strong> ${empStatus}</strong>, Seeking Job <strong> ${seekingJob} </strong>, Job Tittle <strong> ${jobTittle}</strong> , job Type <strong>${jobType}</strong> , Job Summary <strong> ${jobSummary}</strong>
             </h1>`)
            
-           
-            //    var middleName = localStorage.getItem("middleName")
-
-        //    
-        //    
-        //    
-        //    var birthDate = localStorage.getItem("birthDate")
-        //    var gender = localStorage.getItem("gender")
-        //    var numberType = localStorage.getItem("numberType")
-
-        //    alert(`${middleName} ${lastName} ${firstName} ${email} ${education} ${address} ${phoneNumber} ${date} ${gender} ${numberType}`)
 
         </script>
         <title>Portfolio</title>
@@ -91,7 +73,6 @@
         </style>
         <body>
            
-           
               
            <div class="card">
             <p id="demo">
@@ -102,37 +83,7 @@
                 
                 
                 
-                
-                
-<!--                
-                <script>
-                    document.getElementById("lastpage-firstname").innerHTML=localStorage.getItem('textvalue');
-document.getElementById("lastpage-middlename").innerHTML=localStorage.getItem('textvalues');
-document.getElementById("lastpage-lastname").innerHTML=localStorage.getItem('textvaluess');
-document.getElementById("lastpage-education").innerHTML=localStorage.getItem('textvaluesss');
-document.getElementById("lastpage-email").innerHTML=localStorage.getItem('textvaluessd');
-document.getElementById("lastpage-address").innerHTML=localStorage.getItem('textvaluessa');
-document.getElementById("lastpage-result").innerHTML=localStorage.getItem('ddvalue');
-document.getElementById("lastpage-month").innerHTML=localStorage.getItem('vsss');
-document.getElementById("lastpage-Year").innerHTML=localStorage.getItem('mnb');
-document.getElementById("lastpage-phone").innerHTML=localStorage.getItem('bh');
-document.getElementById("lastpage-phonetype").innerHTML=localStorage.getItem('nj');  </script>-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-                
+                     
         </body>
     </head>
 </html>

@@ -9,24 +9,14 @@ function FormData() {
     var gender = document.forms["joinForm"]["gender"].value;
     var numberType = document.forms["joinForm"]["numberType"].value;    
     var date = document.getElementById('datePicker').value;
+    var img = document.forms["joinForm"]["profilePicture"].files[0]
 
-    var profilePicture = document.forms["joinForm"]["profilePicture"].value;
+    
+    var bannerImage = document.getElementById('profilePicture').value;
+   // imgData = getBase64Image(bannerImage);
+    localStorage.setItem("profilePicture", bannerImage);
 
 
-    // // get user's uploaded image
-    // const imgPath = document.querySelector(profilePicture).files[0];
-    // const reader = new FileReader();
-
-    // reader.addEventListener("load", function () {
-    // // convert image file to base64 string and save to localStorage
-    // localStorage.setItem("image", reader.result);
-    // }, false);
-
-    // if (imgPath) {
-    // reader.readAsDataURL(imgPath);
-    // }
-
-    alert(profilePicture)
     localStorage.setItem("firstName", firstName);
     localStorage.setItem("middleName", middleName);
     localStorage.setItem("lastName", lastName);
@@ -50,35 +40,3 @@ function FormData() {
     alert(`${middleName} ${lastName} ${firstName} ${email} ${education} ${address} ${phoneNumber} ${date} ${gender} ${numberType}`)
     console.log(firstName,lastName,middleName,education)
 }
-// function getDay() {
-    
-//     var day = document.getElementById("date").value;
-//     console.log(day)
-// }
-// function handleSubmit() {
-//     const firstname=document.getElementById('txt').value;
-//     const middlename=document.getElementById('tx').value;
-//     const lastname=document.getElementById('txtt').value;
-//     const education=document.getElementById('hg').value;
-//     const email=document.getElementById('tg').value;
-//     const address=document.getElementById('jh').value;
-//     const selectoption=document.getElementById('mytext').value;
-//     const month=document.getElementById('myTxt').value;
-//      const month=document.getElementById('myTxt').value;
-   
-   
-              
-           
-        
-    
-//     localStorage.setItem("textvalue",firstname);
-//     localStorage.setItem("textvalues",middlename);
-//     localStorage.setItem("textvaluess",lastname);
-//     localStorage.setItem("textvaluesss",education);
-//     localStorage.setItem("textvaluessd",email);
-//     localStorage.setItem("textvaluessa",address);
-//     localStorage.setItem("ddvalue",selectoption);
-//     localStorage.setItem("vsss",month);
-
-//     return false ;
-// }
