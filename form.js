@@ -12,22 +12,7 @@ function FormData() {
 
     var profilePicture = document.forms["joinForm"]["profilePicture"].value;
 
-    document.querySelectorAll('#profilePicture').addEventListener('change' ,function() {
-        const reader = new FileReader();
 
-        reader.addEventListener("load" , () => {
-            localStorage.setItem("recent-image" , reader.result);
-        });
-        reader.readAsDataURL(this.files[0])
-    });
-
-document.addEventListener("DOMContentLoaded", ()=> {
-    const recentImageDataUrl = localStorage.getItem("recent-image");
-
-    if(recentImageDataUrl) {
-        document.querySelector("#imgPreview").setAttribute("src" , recentImageDataUrl)
-    }
-})
     // // get user's uploaded image
     // const imgPath = document.querySelector(profilePicture).files[0];
     // const reader = new FileReader();

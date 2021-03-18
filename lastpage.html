@@ -1,6 +1,6 @@
 <html>
     <head>
-        
+        <h1 style="align-items: center;">Portfolio</h1>
         <script>
            var firstName = localStorage.getItem("firstName")
            var lastName = localStorage.getItem("lastName")
@@ -21,24 +21,24 @@
           var jobType = localStorage.getItem("jobType")
           var jobSummary = localStorage.getItem("jobSummary")
 
-          //document.getElementById("demo").innerHTML = firstName; 
+//           //document.getElementById("demo").innerHTML = firstName; 
 
-          document.querySelectorAll('#profilePicture').addEventListener('change' ,function() {
-            const reader = new FileReader();
+//           document.querySelectorAll('#profilePicture').addEventListener('change' ,function() {
+//             const reader = new FileReader();
 
-        reader.addEventListener("load" , () => {
-            localStorage.setItem("recent-image" , reader.result);
-        });
-        reader.readAsDataURL(this.files[0])
-    });
+//         reader.addEventListener("load" , () => {
+//             localStorage.setItem("recent-image" , reader.result);
+//         });
+//         reader.readAsDataURL(this.files[0])
+//     });
 
-          document.addEventListener("DOMContentLoaded", ()=> {
-    const recentImageDataUrl = localStorage.getItem("recent-image");
+//           document.addEventListener("DOMContentLoaded", ()=> {
+//     const recentImageDataUrl = localStorage.getItem("recent-image");
 
-    if(recentImageDataUrl) {
-        document.querySelector("#imgPreview").setAttribute("src" , recentImageDataUrl)
-    }
-})
+//     if(recentImageDataUrl) {
+//         document.querySelector("#imgPreview").setAttribute("src" , recentImageDataUrl)
+//     }
+// })
             document.write(`<h1>Hello i am :${firstName} Middle Name : ${middleName} Last Name : ${lastName}i've done my Education : ${education} and my  Email is : ${email} i am from Address ${address} and my birthdate is Date : ${date} Gender : ${gender} , my Phone Number is : ${phoneNumber}  Number Type : ${numberType}</h1>`)
             document.write(`<h1> My Employeement statusEmployee Status : ${empStatus}, Seeking Job : ${seekingJob} , Job Tittle : ${jobTittle} , job Type :${jobType} , Job Summary : ${jobSummary}
             </h1>`)
